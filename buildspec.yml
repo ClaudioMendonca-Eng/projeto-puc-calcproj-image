@@ -1,22 +1,17 @@
 version: 0.2
-batch:
-  fast-fail: false
+
 phases:
   install:
-    on-failure: ABORT
     runtime-versions:
       php: 8.2
     commands:
       - echo "install"
   pre_build:
-    on-failure: ABORT
     commands:
       - echo "pre_build"
   build:
-    on-failure: ABORT
     commands:
       - echo "build"
   post_build:
-    on-failure: ABORT
     commands:
       - echo "pos_build"
