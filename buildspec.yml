@@ -13,6 +13,7 @@ phases:
   build:
     on-failure: ABORT
     commands:
+      - echo "Docker build started"
       - docker build -t $IMAGE .
       - docker tag $IMAGE:$IMAGE_TAG $REPOSITORY/$IMAGE:$IMAGE_TAG
   post_build:
