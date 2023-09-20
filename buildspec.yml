@@ -14,7 +14,7 @@ phases:
     on-failure: ABORT
     commands:
       - echo "Docker build started"
-      - docker build -t $IMAGE .
+      - docker build -t projeto-puc-calcproj-image .
       - docker tag projeto-puc-calcproj-image:latest 800067687844.dkr.ecr.us-east-1.amazonaws.com/projeto-puc-calcproj-image:latest
   post_build:
     on-failure: ABORT
