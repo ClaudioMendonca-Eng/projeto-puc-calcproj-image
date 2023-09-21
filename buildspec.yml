@@ -9,7 +9,7 @@ phases:
     on-failure: ABORT
     commands:
       - echo "Logging in to Amazon ECR...."
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $REPOSITORY
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 800067687844.dkr.ecr.us-east-1.amazonaws.com
   build:
     on-failure: ABORT
     commands:
@@ -20,4 +20,4 @@ phases:
     on-failure: ABORT
     commands:
       - docker images ls -a
-      - docker push $REPOSITORY/$IMAGE:$IMAGETAG
+      - docker push 800067687844.dkr.ecr.us-east-1.amazonaws.com/projeto-puc-calcproj-image:latest
